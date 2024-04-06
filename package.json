@@ -1,0 +1,25 @@
+{
+  "name": "plume",
+  "displayName": "Plume",
+  "description": "Plume language support for Visual Studio Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "plume",
+      "aliases": ["Plume", "plume"],
+      "extensions": [".plm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "plume",
+      "scopeName": "source.plume",
+      "path": "./syntaxes/plume.tmLanguage.json"
+    }]
+  }
+}

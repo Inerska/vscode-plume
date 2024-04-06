@@ -1,2 +1,2 @@
-# vscode-plume
-Plume Language Support for Visual Studio Code 
+# Language support for Plume for Visual Studio Code
+Provides syntax highlighting for Plume files in Visual Studio Code.
