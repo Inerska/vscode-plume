@@ -2,7 +2,7 @@
   "name": "plume",
   "displayName": "Plume",
   "description": "Plume language support for Visual Studio Code",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "icon": "images/icon.png",
   "publisher": "PlumeLang",
   "engines": {
