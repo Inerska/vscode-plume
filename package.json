@@ -23,7 +23,11 @@
       "id": "plume",
       "aliases": ["Plume", "plume"],
       "extensions": [".plm"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "dark": "./images/file_icon.png",
+        "light": "./images/file_icon.png"
+      }
     }],
     "grammars": [{
       "language": "plume",
@@ -33,13 +37,6 @@
     "snippets": [{
       "language": "plume",
       "path": "./snippets/snippets.json"
-    }],
-    "iconThemes": [
-      {
-        "id": "plume",
-        "label": "Plume",
-        "path": "./icons/plume-icon-theme.json"
-      }
-    ]
+    }]
   }
 }
