@@ -2,14 +2,17 @@
   "name": "plume",
   "displayName": "Plume",
   "description": "Plume language support for Visual Studio Code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "icon": "images/icon.png",
   "publisher": "PlumeLang",
   "engines": {
     "vscode": "^1.88.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Linters",
+    "Formatters",
+    "Snippets"
   ],
   "repository": {
     "type": "git",
@@ -30,6 +33,13 @@
     "snippets": [{
       "language": "plume",
       "path": "./snippets/snippets.json"
-    }]
+    }],
+    "iconThemes": [
+      {
+        "id": "plume",
+        "label": "Plume",
+        "path": "./icons/plume-icon-theme.json"
+      }
+    ]
   }
 }

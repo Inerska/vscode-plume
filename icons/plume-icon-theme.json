@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "_plume": {
+      "iconPath": "../images/file_icon.png"
+    }
+  },
+  "fileExtensions": {
+    "plm": "_plume"
+  }
+}
