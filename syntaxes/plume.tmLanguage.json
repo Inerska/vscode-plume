@@ -1,32 +1,100 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Plume",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.plume",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.plume",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.plume",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.plume"
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Plume",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#annotations"
+        },
+        {
+            "include": "#methods"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#numbers"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.plume",
+                    "match": "\\b(if|then|else|switch|case|return)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.plume",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.plume",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "support.type.plume",
+                    "match": "\\b(int|str|Result)\\b"
+                }
+            ]
+        },
+        "functions": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.plume",
+                    "match": "\\b(println|show|map|concat|slice|flatMap|product|exp|facto)\\b"
+                }
+            ]
+        },
+        "annotations": {
+            "patterns": [
+                {
+                    "name": "annotation.plume",
+                    "match": "@\\w+"
+                }
+            ]
+        },
+        "methods": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.method.plume",
+                    "match": "\\.\\w+\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.plume",
+                    "match": "(\\+|\\-|\\*|\\/|\\=\\=|\\=|\\<\\=|\\>\\=|\\<|\\>|\\.\\.|\\[|\\])"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.plume",
+                    "match": "\\b\\d+\\b"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.plume"
 }
