@@ -25,6 +25,15 @@
         },
         {
             "include": "#numbers"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#user_types"
+        },
+        {
+            "include": "#macros"
         }
     ],
     "repository": {
@@ -32,7 +41,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.plume",
-                    "match": "\\b(if|then|else|switch|case|return)\\b"
+                    "match": "\\b(if|then|else|switch|case|return|type|extend|with|infixr)\\b"
                 }
             ]
         },
@@ -51,7 +60,7 @@
             "patterns": [
                 {
                     "name": "support.type.plume",
-                    "match": "\\b(int|str|Result)\\b"
+                    "match": "\\b(int|str|bool|char|Option|Result|Parser|ParserResult)\\b"
                 }
             ]
         },
@@ -59,7 +68,7 @@
             "patterns": [
                 {
                     "name": "entity.name.function.plume",
-                    "match": "\\b(println|show|map|concat|slice|flatMap|product|exp|facto)\\b"
+                    "match": "\\b(println|show|map|concat|slice|flatMap|product|exp|facto|throwParser|throw_result|pure|satisfy|character|string)\\b"
                 }
             ]
         },
@@ -75,7 +84,7 @@
             "patterns": [
                 {
                     "name": "entity.name.function.method.plume",
-                    "match": "\\.\\w+\\b"
+                    "match": "\\.(\\w+)\\b"
                 }
             ]
         },
@@ -83,7 +92,7 @@
             "patterns": [
                 {
                     "name": "keyword.operator.plume",
-                    "match": "(\\+|\\-|\\*|\\/|\\=\\=|\\=|\\<\\=|\\>\\=|\\<|\\>|\\.\\.|\\[|\\])"
+                    "match": "(\\+|\\-|\\*|\\/|\\=\\=|\\=|\\<\\=|\\>\\=|\\<|\\>|\\.\\.|\\[|\\]|\\(|\\)|\\:|\\?|\\,|\\>\\>)"
                 }
             ]
         },
@@ -92,6 +101,46 @@
                 {
                     "name": "constant.numeric.plume",
                     "match": "\\b\\d+\\b"
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.block.plume",
+                    "begin": "/\\*",
+                    "end": "\\*/",
+                    "captures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.plume"
+                        }
+                    }
+                },
+                {
+                    "name": "comment.line.double-slash.plume",
+                    "begin": "//",
+                    "end": "$",
+                    "captures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.plume"
+                        }
+                    }
+                }
+            ]
+        },
+        "user_types": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.plume",
+                    "match": "\b(user|ParserResult|Parser)\b"
+                }
+            ]
+        },
+        "macros": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.macro.plume",
+                    "match": "\\b(@\\w+)\\b"
                 }
             ]
         }
