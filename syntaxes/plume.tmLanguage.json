@@ -68,7 +68,7 @@
             "patterns": [
                 {
                     "name": "entity.name.function.plume",
-                    "match": "\\b(println|show|map|concat|slice|flatMap|product|exp|facto|throwParser|throw_result|pure|satisfy|character|string)\\b"
+                    "match": "\\b(\\w+)\\s*\\("
                 }
             ]
         },
@@ -108,8 +108,8 @@
             "patterns": [
                 {
                     "name": "comment.block.plume",
-                    "begin": "/\\*",
-                    "end": "\\*/",
+                    "begin": "/**",
+                    "end": "*/",
                     "captures": {
                         "0": {
                             "name": "punctuation.definition.comment.plume"
