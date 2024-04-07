@@ -41,7 +41,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.plume",
-                    "match": "\\b(if|then|else|switch|case|return|type|extend|with|infixr)\\b"
+                    "match": "\\b(if|then|else|switch|case|return|type|extend|with|infixr|require|source)\\b"
                 }
             ]
         },
@@ -108,14 +108,14 @@
             "patterns": [
                 {
                     "name": "comment.block.plume",
-                    "begin": "/**",
-                    "end": "*/",
+                    "begin": "/\\*\\*",
+                    "end": "\\*/",
                     "captures": {
                         "0": {
                             "name": "punctuation.definition.comment.plume"
                         }
                     }
-                },
+                },                
                 {
                     "name": "comment.line.double-slash.plume",
                     "begin": "//",
@@ -125,9 +125,9 @@
                             "name": "punctuation.definition.comment.plume"
                         }
                     }
-                }
+                }                
             ]
-        },
+        },        
         "user_types": {
             "patterns": [
                 {
