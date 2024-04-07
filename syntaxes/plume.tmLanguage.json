@@ -112,26 +112,26 @@
             "patterns": [
                 {
                     "name": "comment.block.plume",
-                    "begin": "/\\*\\*",
-                    "end": "\\*/",
+                    "begin": "\\/\\*\\*",
+                    "end": "\\*\\/",
                     "captures": {
                         "0": {
                             "name": "punctuation.definition.comment.plume"
                         }
                     }
-                },                
+                },
                 {
                     "name": "comment.line.double-slash.plume",
-                    "begin": "//",
+                    "begin": "\\/\\/",
                     "end": "$",
                     "captures": {
                         "0": {
                             "name": "punctuation.definition.comment.plume"
                         }
                     }
-                }                
+                }
             ]
-        },        
+        },            
         "user_types": {
             "patterns": [
                 {
